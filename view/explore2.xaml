@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cardView="clr-namespace:CardView;assembly=CardView"
+             x:Class="explore.view.explore2">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid Padding="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="vBtn"
+                Text="Coaches" Clicked="Handle_Clicked"
+                TextColor="Black"
+                BackgroundColor="Transparent"
+                BorderColor="Transparent"
+                Grid.Row="0"
+                Grid.Column="0"/>
+
+                <Button x:Name="pBtn"
+                Text="Cources" Clicked="Handle_Clicked"
+                TextColor="Black"
+                BackgroundColor="Transparent"
+                BorderColor="Transparent"
+                Grid.Row="0"
+                Grid.Column="1" />
+                <BoxView x:Name="vBox"
+                 Color="#FFA500" HeightRequest="5"
+                 Grid.Row="1"
+                 Grid.Column="0"/>
+                <BoxView x:Name="pBox"
+                 Color="Silver" HeightRequest="5" 
+                 Grid.Row="1"
+                 Grid.Column="1"/>
+            </Grid>
+
+
+            <ListView
+            x:Name="listView"
+            Margin="0,8,0,0"
+            HasUnevenRows="True"
+            ItemsSource="{Binding Coaches}"
+            SeparatorVisibility="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="8,8,8,8" Orientation="Vertical">
+                                <cardView:CardView
+                                    
+                                BackgroundColor="White"
+                                 
+                                CardViewHasShadow="True"
+                                HeightRequest="220">
+                                    <cardView:CardView.CardViewContent>
+                                        <StackLayout
+                                        Padding="10"
+                                        HorizontalOptions="Center"
+                                        Spacing="10"
+                                        VerticalOptions="Center">
+                                            
+                                            
+                                            
+                                            
+                                            <Grid>
+                                                <StackLayout Orientation="Vertical">
+                                                    <StackLayout Orientation="Horizontal"     Margin="0,-20,0,0"   >
+                                                        <Label
+                                                Grid.Row="0"
+                                                Grid.Column="0"
+                                                Margin="15,0,0,0"
+                                                FontSize="Medium"
+                                                Text="{Binding FistName}" />
+                                                        <Label
+                                                Grid.Row="0"
+                                                Grid.Column="1"
+                                                Margin="0,0,0,0"
+                                                FontSize="Medium"
+                                                HorizontalTextAlignment="Start"
+                                                Text="{Binding LastName}" />
+                                                    </StackLayout>
+
+                                                    <StackLayout Orientation="Horizontal">
+                                                        <Label
+                                                Grid.Row="0"
+                                                Grid.Column="0"
+                                                Margin="15,0,0,0"
+                                                FontSize="Medium"
+                                                Text="{Binding Course}" />
+                                                        <Label
+                                                Grid.Row="0"
+                                                Grid.Column="0"
+                                                Margin="0,0,0,0"
+                                                FontSize="Medium"
+                                                Text="Coach" />
+
+                                                    </StackLayout>
+                                                </StackLayout>
+                                            </Grid>
+                                            <BoxView
+                                            HeightRequest="1"
+                                            WidthRequest="275"
+                                            Color="LightGray" />
+                                            <Grid>
+                                                <Label
+                                                Grid.Row="0"
+                                                Grid.Column="0"
+                                                Margin="15,0,0,0"
+                                                FontSize="Medium"
+                                                Text="{Binding Location}" />
+                                                <Label
+                                                Grid.Row="0"
+                                                Grid.Column="1"
+                                                Margin="0,0,15,0"
+                                                FontSize="Medium"
+                                                HorizontalTextAlignment="End"
+                                                Text="{Binding  Phone }" />
+                                            </Grid>
+                                        </StackLayout>
+                                    </cardView:CardView.CardViewContent>
+                                </cardView:CardView>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+
+
+
+
+            <Frame Margin="0,0,0,0"  VerticalOptions="End" BackgroundColor="WhiteSmoke" HorizontalOptions="Fill">
+                <StackLayout  HorizontalOptions="Center" Orientation="Horizontal"  >
+                    <StackLayout Orientation="Vertical">
+                        <Button WidthRequest="40"  Padding="0" Margin="20,0"
+                                HeightRequest="40"
+                                HorizontalOptions="Start" BackgroundColor="WhiteSmoke"
+                                ImageSource="home.png"></Button>
+
+                        <Label FontAttributes="Bold" FontSize="Small"
+                               HorizontalOptions="Start"
+                               Margin="20,0"
+                               Text="Home"
+                               ></Label>
+                    </StackLayout>
+
+                    <StackLayout Padding="5,0" Orientation="Vertical">
+                        <Button WidthRequest="40" CornerRadius="30" Padding="0" Margin="20,0"
+                                HeightRequest="40"
+                                HorizontalOptions="Start" BackgroundColor="WhiteSmoke"
+                                ImageSource="notify.png"></Button>
+                        <Label TextColor="Gray" FontAttributes="Bold"
+                               HorizontalOptions="Start"
+                               Margin="20,0" FontSize="Small"
+                               Text="Notifi"></Label>
+                    </StackLayout>
+
+                    <StackLayout Padding="5,0" Orientation="Vertical">
+                        <Button WidthRequest="40" CornerRadius="30" Padding="0" Margin="20,0"
+                                HeightRequest="40"
+                                HorizontalOptions="Start" BackgroundColor="WhiteSmoke"
+                                ImageSource="explore.png"></Button>
+                        <Label FontSize="11" FontAttributes="Bold"
+                               HorizontalOptions="Start"
+                               Margin="20,0" TextColor="Gray"
+                               Text="Explore"></Label>
+                    </StackLayout>
+                    <StackLayout Padding="5,0" Orientation="Vertical">
+                        <Button WidthRequest="40" CornerRadius="30" Padding="0" Margin="20,0"
+                                HeightRequest="40"
+                                HorizontalOptions="Start" BackgroundColor="WhiteSmoke"
+                                ImageSource="profile.png"></Button>
+                        <Label FontSize="13"
+                               FontAttributes="Bold"
+                               HorizontalOptions="Start"
+                               Margin="20,0" TextColor="Gray"
+                               Text="Profile"></Label>
+                    </StackLayout>
+
+
+
+
+
+
+                </StackLayout>
+
+
+            </Frame>
+
+
+
+
+
+
+        </StackLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>
