@@ -9,15 +9,34 @@
     ".NETStandard,Version=v2.0/": {
       "App52/1.0.0": {
         "dependencies": {
+          "Combo": "1.1.0",
           "FirebaseDatabase.net": "4.0.7",
           "NETStandard.Library": "2.0.3",
+          "PanCardView": "1.0.0",
+          "Plugin.FormsStackPanel": "1.0.3",
           "Refractored.MvvmHelpers": "1.6.2",
+          "Syncfusion.Xamarin.SfComboBox": "20.1.0.47",
           "System.ObjectModel": "4.3.0",
           "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2196"
+          "Xamarin.Forms": "5.0.0.2196",
+          "Xamarin.Forms.ComboBox": "1.0.0.3",
+          "Xamarin.Forms.PancakeView": "2.3.0.759",
+          "XamarinForms.CardView": "1.1.1.5",
+          "XamarinReactorUI.PancakeView": "1.0.125"
         },
         "runtime": {
           "App52.dll": {}
+        }
+      },
+      "Combo/1.1.0": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3"
+        },
+        "runtime": {
+          "lib/netstandard1.6/Combo.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.0.0"
+          }
         }
       },
       "FirebaseDatabase.net/4.0.7": {
@@ -60,6 +79,18 @@
           }
         }
       },
+      "PanCardView/1.0.0": {
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2196"
+        },
+        "runtime": {
+          "lib/netstandard2.0/PanCardView.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Plugin.FormsStackPanel/1.0.3": {},
       "Refractored.MvvmHelpers/1.6.2": {
         "dependencies": {
           "System.ValueTuple": "4.5.0"
@@ -71,11 +102,54 @@
           }
         }
       },
+      "Syncfusion.Licensing/20.1.0.47": {
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.Licensing.dll": {
+            "assemblyVersion": "20.1.0.47",
+            "fileVersion": "20.1.0.47"
+          }
+        }
+      },
+      "Syncfusion.Xamarin.Core/20.1.0.47": {
+        "dependencies": {
+          "Syncfusion.Licensing": "20.1.0.47",
+          "Xamarin.Forms": "5.0.0.2196"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.Core.XForms.dll": {
+            "assemblyVersion": "20.1451.0.47",
+            "fileVersion": "20.1451.0.47"
+          }
+        }
+      },
+      "Syncfusion.Xamarin.SfComboBox/20.1.0.47": {
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "20.1.0.47",
+          "Xamarin.Forms": "5.0.0.2196"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.SfComboBox.XForms.dll": {
+            "assemblyVersion": "20.1451.0.47",
+            "fileVersion": "20.1451.0.47"
+          }
+        }
+      },
       "System.Collections/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
+        }
+      },
+      "System.ComponentModel/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.ComponentModel.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.24705.1"
+          }
         }
       },
       "System.Diagnostics.Debug/4.3.0": {
@@ -242,6 +316,69 @@
             "fileVersion": "5.0.0.786"
           }
         }
+      },
+      "Xamarin.Forms.ComboBox/1.0.0.3": {
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2196",
+          "Xamarin.Forms.Visual.Material": "5.0.0.2012"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.ComboBox.dll": {
+            "assemblyVersion": "1.0.0.3",
+            "fileVersion": "1.0.0.3"
+          }
+        }
+      },
+      "Xamarin.Forms.PancakeView/2.3.0.759": {
+        "dependencies": {
+          "System.ComponentModel": "4.3.0",
+          "Xamarin.Forms": "5.0.0.2196"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.PancakeView.dll": {
+            "assemblyVersion": "2.0.1.0",
+            "fileVersion": "2.0.1.0"
+          }
+        }
+      },
+      "Xamarin.Forms.Visual.Material/5.0.0.2012": {
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2196"
+        }
+      },
+      "XamarinForms.CardView/1.1.1.5": {
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2196"
+        },
+        "runtime": {
+          "lib/portable45-net45+win8+wp8+wpa81/CardView.dll": {
+            "assemblyVersion": "1.1.1.5",
+            "fileVersion": "1.1.1.5"
+          }
+        }
+      },
+      "XamarinReactorUI/1.0.125": {
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2196"
+        },
+        "runtime": {
+          "lib/netstandard2.0/XamarinReactorUI.dll": {
+            "assemblyVersion": "1.0.125.0",
+            "fileVersion": "1.0.125.0"
+          }
+        }
+      },
+      "XamarinReactorUI.PancakeView/1.0.125": {
+        "dependencies": {
+          "Xamarin.Forms.PancakeView": "2.3.0.759",
+          "XamarinReactorUI": "1.0.125"
+        },
+        "runtime": {
+          "lib/netstandard2.0/XamarinReactorUI.PancakeView.dll": {
+            "assemblyVersion": "1.0.125.0",
+            "fileVersion": "1.0.125.0"
+          }
+        }
       }
     }
   },
@@ -250,6 +387,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Combo/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qbiPreYglgbjxUQ8snnZDA8RPsg0MgL6TEzqQ7RulKFVbnVsYr5ikPkD6rkAQKJ1vIaL6ZGktYP4hqgpxpmQTQ==",
+      "path": "combo/1.1.0",
+      "hashPath": "combo.1.1.0.nupkg.sha512"
     },
     "FirebaseDatabase.net/4.0.7": {
       "type": "package",
@@ -293,6 +437,20 @@
       "path": "newtonsoft.json/11.0.2",
       "hashPath": "newtonsoft.json.11.0.2.nupkg.sha512"
     },
+    "PanCardView/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uLxeWtTu+cSk9eMah6mtaCWk4yE4baSMD1Df1RTviLuY4EErbnuP9ZpB7sFQvE5yU/LQwZBJcfEtfsXiyexadA==",
+      "path": "pancardview/1.0.0",
+      "hashPath": "pancardview.1.0.0.nupkg.sha512"
+    },
+    "Plugin.FormsStackPanel/1.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Kkn9GE/NKhY2YeLpjBBW7W25dDSQ/BXF2V16HaqJYSCIPUv4UwfhiNdMmb8kDnpgMED/URC4LWAxOPPZx1tzMg==",
+      "path": "plugin.formsstackpanel/1.0.3",
+      "hashPath": "plugin.formsstackpanel.1.0.3.nupkg.sha512"
+    },
     "Refractored.MvvmHelpers/1.6.2": {
       "type": "package",
       "serviceable": true,
@@ -300,12 +458,40 @@
       "path": "refractored.mvvmhelpers/1.6.2",
       "hashPath": "refractored.mvvmhelpers.1.6.2.nupkg.sha512"
     },
+    "Syncfusion.Licensing/20.1.0.47": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wvtXu+N9seO8rHt18VmOGX9B2/aAzyxKteyDVXJPUBcuLf8PuRppBE9cx3gKeBokvMK03zihC/39xcz4kWdtNA==",
+      "path": "syncfusion.licensing/20.1.0.47",
+      "hashPath": "syncfusion.licensing.20.1.0.47.nupkg.sha512"
+    },
+    "Syncfusion.Xamarin.Core/20.1.0.47": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-L6RiJZK7BZ/ijjjXYolMf1wkz4+gep6tLmeZqzsr9+d0WcFmAN4YwLV5i3gQq7gvqo2Niij/+CPCWr55VADzvg==",
+      "path": "syncfusion.xamarin.core/20.1.0.47",
+      "hashPath": "syncfusion.xamarin.core.20.1.0.47.nupkg.sha512"
+    },
+    "Syncfusion.Xamarin.SfComboBox/20.1.0.47": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WxPxZYgOsSwdEy0r39eD+GsuHC0/u/equ0iQsGQgLp9pVOBFeTOu9rvj1r+lWuXu+S+F7Kqmfqp9JG6M6668jw==",
+      "path": "syncfusion.xamarin.sfcombobox/20.1.0.47",
+      "hashPath": "syncfusion.xamarin.sfcombobox.20.1.0.47.nupkg.sha512"
+    },
     "System.Collections/4.3.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-3Dcj85/TBdVpL5Zr+gEEBUuFe2icOnLalmEh9hfck1PTYbbyWuZgh4fmm2ysCLTrqLQw6t3TgTyJ+VLp+Qb+Lw==",
       "path": "system.collections/4.3.0",
       "hashPath": "system.collections.4.3.0.nupkg.sha512"
+    },
+    "System.ComponentModel/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VyGn1jGRZVfxnh8EdvDCi71v3bMXrsu8aYJOwoV7SNDLVhiEqwP86pPMyRGsDsxhXAm2b3o9OIqeETfN5qfezw==",
+      "path": "system.componentmodel/4.3.0",
+      "hashPath": "system.componentmodel.4.3.0.nupkg.sha512"
     },
     "System.Diagnostics.Debug/4.3.0": {
       "type": "package",
@@ -432,6 +618,48 @@
       "sha512": "sha512-zSXDiZukojtEBmZKUUG1yYBwlB9tI8JLPkc6n+Sm1PAX01QyzErWE9AaFJgP7usyoGHn92l4HnQF7A+/MPI6VA==",
       "path": "xamarin.forms/5.0.0.2196",
       "hashPath": "xamarin.forms.5.0.0.2196.nupkg.sha512"
+    },
+    "Xamarin.Forms.ComboBox/1.0.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jMbUH1YSXK+0YpWWuwUnAncCTmCKPEFVJEdAxJ/DUzn8U09AKfYHUGdX+a7xB4BIuSweFa+mUDLVjNZ1gSmhUg==",
+      "path": "xamarin.forms.combobox/1.0.0.3",
+      "hashPath": "xamarin.forms.combobox.1.0.0.3.nupkg.sha512"
+    },
+    "Xamarin.Forms.PancakeView/2.3.0.759": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TGVsLJuGd/PKlyhmcBxZnHhHqyhYppzyrdb2q/sy+S6dQYkeGM8A+HmIIHVhbi7r8Sjasa/HRBkOmTSYQOZzhQ==",
+      "path": "xamarin.forms.pancakeview/2.3.0.759",
+      "hashPath": "xamarin.forms.pancakeview.2.3.0.759.nupkg.sha512"
+    },
+    "Xamarin.Forms.Visual.Material/5.0.0.2012": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZwYp0UpXJICPvHlgiVCdpr3WwWcMClb7rNCUlMZ93L/zJVFIGMloi49sC9l+jxvPZMStVTbptDm+BhSNszNHng==",
+      "path": "xamarin.forms.visual.material/5.0.0.2012",
+      "hashPath": "xamarin.forms.visual.material.5.0.0.2012.nupkg.sha512"
+    },
+    "XamarinForms.CardView/1.1.1.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hINUX1T870jmEnXIAkZhG4kenuzbJZNZ76a3wnvAnTipFWIMtS0e7+xyNjAI2SyhgzH/2I9Xt46/RwU1mq4frw==",
+      "path": "xamarinforms.cardview/1.1.1.5",
+      "hashPath": "xamarinforms.cardview.1.1.1.5.nupkg.sha512"
+    },
+    "XamarinReactorUI/1.0.125": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KOttBN5t+EIzWwURri80L8ezwV6XEP7x94htRlr6R840tZxNKFKpp8hWfx5xNNWBhDzes1VRBohNmYrq978S/g==",
+      "path": "xamarinreactorui/1.0.125",
+      "hashPath": "xamarinreactorui.1.0.125.nupkg.sha512"
+    },
+    "XamarinReactorUI.PancakeView/1.0.125": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wIc3PmBMzIKT5fyQB4D7Y/LXBCQaLjhcV2htzMrx7lY3z4VZQ5cL8FvX2cmi9lEsD9FuzidFZznzzZBhUkYysw==",
+      "path": "xamarinreactorui.pancakeview/1.0.125",
+      "hashPath": "xamarinreactorui.pancakeview.1.0.125.nupkg.sha512"
     }
   }
 }
