@@ -4,8 +4,20 @@
              xmlns:cardView="clr-namespace:CardView;assembly=CardView"
              x:Class="explore.view.explore2">
     <ContentPage.Content>
+
+       
         <StackLayout>
-            <Grid Padding="10">
+
+            <StackLayout Orientation="Horizontal">
+
+                <Label Text="Explore"
+                 HorizontalOptions="CenterAndExpand" Margin="140,20,0,0"  FontSize="Medium" TextColor="Black" FontAttributes="Bold"></Label>
+
+                <Button ImageSource="search.png"   Clicked="NavigateButton_OnClicked"  BackgroundColor="Transparent"   Margin="0,18,20,0" HorizontalOptions="EndAndExpand" WidthRequest="50" HeightRequest="30"></Button>
+                
+            </StackLayout>
+            
+            <Grid Padding="10" Margin="0,20,0,0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="auto" />
@@ -42,6 +54,7 @@
 
 
             <ListView
+            ItemTapped="ListView_ItemTapped"
             x:Name="listView"
             Margin="0,8,0,0"
             HasUnevenRows="True"
@@ -50,10 +63,12 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
+                            
+                            
                             <StackLayout Padding="8,8,8,8" Orientation="Vertical">
                                 <cardView:CardView
                                     
-                                BackgroundColor="White"
+                                BackgroundColor="white"
                                  
                                 CardViewHasShadow="True"
                                 HeightRequest="220">
@@ -68,35 +83,58 @@
                                             
                                             
                                             <Grid>
-                                                <StackLayout Orientation="Vertical">
-                                                    <StackLayout Orientation="Horizontal"     Margin="0,-20,0,0"   >
+                                                <StackLayout >
+                                                    <Frame CornerRadius="100" 
+                                                           HeightRequest="70"
+                                                           WidthRequest="70"
+                                                           HorizontalOptions="Start"
+                                                           Padding="0"
+                                                           IsClippedToBounds="True"
+                                                           >
+                                                        <Image Source="person.jpeg" 
+                                                            HorizontalOptions="Center"
+                                                            VerticalOptions="Center" />
+                                                    </Frame>
+                                                </StackLayout>
+
+                                                <StackLayout Orientation="Vertical"    Margin="82,0,0,0"    >
+                                                    <StackLayout Orientation="Horizontal"        >
+
+
+                                                       
                                                         <Label
                                                 Grid.Row="0"
                                                 Grid.Column="0"
                                                 Margin="15,0,0,0"
                                                 FontSize="Medium"
+                                                FontAttributes="Bold"
+                                                TextColor="Black"
                                                 Text="{Binding FistName}" />
                                                         <Label
                                                 Grid.Row="0"
                                                 Grid.Column="1"
-                                                Margin="0,0,0,0"
+                                                TextColor="Black"
+
                                                 FontSize="Medium"
+                                                FontAttributes="Bold"
                                                 HorizontalTextAlignment="Start"
                                                 Text="{Binding LastName}" />
+                                                        
                                                     </StackLayout>
 
-                                                    <StackLayout Orientation="Horizontal">
+                                                    <StackLayout Orientation="Horizontal" >
                                                         <Label
                                                 Grid.Row="0"
                                                 Grid.Column="0"
                                                 Margin="15,0,0,0"
                                                 FontSize="Medium"
+                                                TextColor="Black"
                                                 Text="{Binding Course}" />
                                                         <Label
                                                 Grid.Row="0"
                                                 Grid.Column="0"
-                                                Margin="0,0,0,0"
                                                 FontSize="Medium"
+                                                TextColor="Black"
                                                 Text="Coach" />
 
                                                     </StackLayout>
@@ -107,19 +145,51 @@
                                             WidthRequest="275"
                                             Color="LightGray" />
                                             <Grid>
-                                                <Label
+                                                <StackLayout Orientation="Horizontal" Margin="20,0,0,0">
+
+                                                    <Frame CornerRadius="100" 
+                                                           HeightRequest="25"
+                                                           WidthRequest="25"
+                                                           HorizontalOptions="Start"
+                                                           Padding="0"
+                                                           IsClippedToBounds="True"
+                                                           >
+                                                        <Image Source="location.png" 
+                                                               HorizontalOptions="Center"
+                                                               VerticalOptions="Center" />
+                                                    </Frame>
+
+
+                                                    <Label
                                                 Grid.Row="0"
                                                 Grid.Column="0"
                                                 Margin="15,0,0,0"
                                                 FontSize="Medium"
                                                 Text="{Binding Location}" />
-                                                <Label
+                                                </StackLayout>
+
+                                                <StackLayout Orientation="Horizontal" Margin="160,0,0,0">
+
+                                                    <Frame CornerRadius="100" 
+                                                           HeightRequest="25"
+                                                           WidthRequest="25"
+                                                           HorizontalOptions="Start"
+                                                           Padding="0"
+                                                           IsClippedToBounds="True"
+                                                           >
+                                                        <Image Source="phone.png" 
+                                                               HorizontalOptions="Center"
+                                                               VerticalOptions="Center" />
+                                                    </Frame>
+
+                                                    <Label
                                                 Grid.Row="0"
                                                 Grid.Column="1"
                                                 Margin="0,0,15,0"
                                                 FontSize="Medium"
                                                 HorizontalTextAlignment="End"
                                                 Text="{Binding  Phone }" />
+                                                </StackLayout>
                                             </Grid>
                                         </StackLayout>
                                     </cardView:CardView.CardViewContent>

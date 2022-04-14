@@ -24,9 +24,9 @@ namespace explore.services
             return CoachData;
         }
 
-        public async Task AddCoach(string fname, string lname,  int age , string  course ,string location ,string phone)
+        public async Task AddCoach(string fname, string lname, string  course ,string location ,string phone)
         {
-            Coaches c = new Coaches() { FistName = fname, LastName = lname,  coachAge = age , Course = course , Location=location , Phone=phone};
+            Coaches c = new Coaches() { FistName = fname, LastName = lname,  Course = course , Location=location , Phone=phone};
             await client.Child("Coach").PostAsync(c);
         }
 

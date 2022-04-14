@@ -5,17 +5,36 @@ using System.Text;
 using System.Threading.Tasks;
 using explore.modelview;
 using Xamarin.Forms;
+using explore.model;
 using Xamarin.Forms.Xaml;
 
 namespace explore.view
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class explore2 : ContentPage
-    {
+    {          
+
         public explore2()
         {
             InitializeComponent();
             BindingContext = new exploremodelview();
+
+        }
+
+
+
+        private  void NavigateButton_OnClicked(object sender, EventArgs e)
+        {
+
+            App.Current.MainPage = new SearchPage();
+        }
+
+        private void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+
+            App.Current.MainPage = new Profile();
+
+         
         }
 
         void Handle_Clicked(object sender, System.EventArgs e)
@@ -38,6 +57,9 @@ namespace explore.view
             }
         }
 
+        private void Button_Clicked(object sender, EventArgs e)
+        {
 
+        }
     }
 }
