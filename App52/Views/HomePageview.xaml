@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:cardView="clr-namespace:CardView;assembly=CardView"
@@ -63,21 +63,23 @@
 
                             <StackLayout Padding="8,8,8,8" Orientation="Vertical">
 
+                                <Frame CornerRadius="10" BackgroundColor="Orange" Margin="20,0,20,0">
+                                    <cardView:CardView
 
-                                <cardView:CardView
-                                    
                                 BackgroundColor="Orange"
-                                 
+                                
                                 CardViewHasShadow="True"
-                                HeightRequest="100">
+                                HeightRequest="100" >
 
-                                  
+
+
 
 
 
                                         <cardView:CardView.CardViewContent>
                                             <StackLayout
                                         Padding="10"
+                                            
                                         HorizontalOptions="Center"
                                         Spacing="10"
                                         VerticalOptions="Center">
@@ -86,23 +88,23 @@
 
 
                                                 <Grid>
-                                                 
+
 
                                                     <StackLayout Orientation="Vertical"    Margin="82,0,0,0"    >
-                                                       
 
 
 
-                                                            <Label
+
+                                                        <Label
                                                 Grid.Row="0"
                                                 Grid.Column="0"
                                                 Margin="-70,0,0,0"
                                                 FontSize="Medium"
                                                 FontAttributes="Bold"                                                TextColor="Black"
                                                 Text="{Binding Date}" />
-                                             
 
-                                                   
+
+
                                                     </StackLayout>
                                                 </Grid>
                                                 <BoxView
@@ -119,8 +121,8 @@
                                                            Padding="0"
                                                            IsClippedToBounds="True"
                                                            >
-                                                            
-                                                        <Button ImageSource="pend.png" 
+
+                                                            <Button ImageSource="pend.png" 
                                                                 Clicked="Button_Clicked"
                                                                HorizontalOptions="Center"
                                                                VerticalOptions="Center" />
@@ -151,7 +153,8 @@
                                                 </Grid>
                                             </StackLayout>
                                         </cardView:CardView.CardViewContent>
-                                </cardView:CardView>
+                                    </cardView:CardView>
+                                </Frame>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
