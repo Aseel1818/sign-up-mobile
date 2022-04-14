@@ -17,16 +17,17 @@ namespace App52.Services
             client = new FirebaseClient("https://my-coach-9875d-default-rtdb.firebaseio.com/");
 
         }
-        public ObservableCollection<Coach> getCoach()
+        public ObservableCollection<HomePage> getCoach()
         {
-            var CoachData = client.Child("Coach").AsObservable<Coach>().AsObservableCollection();
+            var CoachData = client.Child("Time1").AsObservable<HomePage>().AsObservableCollection();
+
             return CoachData;
         }
 
-            public async Task AddCoach(string firstName,string lastName , int age)
+            public async Task AddCoach(string time1, string date1,string title1)
         {
-            Coach c=new Coach() { FirstName= firstName, LastName = lastName, Age = age };
-            await client.Child("Coach").PostAsync(c);
+            HomePage c=new HomePage() { Time = time1 ,Date=date1, title = title1};
+            await client.Child("Time1").PostAsync(c);
         }
 
     }

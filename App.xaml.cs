@@ -10,7 +10,7 @@ namespace App52
         {
             InitializeComponent();
 
-            MainPage = new CoachPage();
+            MainPage = new HomePage();
         }
 
         protected override void OnStart()
