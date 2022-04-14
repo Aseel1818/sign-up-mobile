@@ -8,7 +8,7 @@
     <ContentPage.Content>
         <StackLayout>
 
-            <Label Text="Welcome to MyCoach"
+            <Label Text="Home Page"
                    VerticalOptions="Start" 
                    Margin="18,40"
                    HorizontalOptions="Center" 
