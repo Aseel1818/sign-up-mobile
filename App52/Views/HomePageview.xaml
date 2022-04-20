@@ -16,7 +16,19 @@
                    FontAttributes="Bold"
                    TextColor="Gray" />
             
-
+ <StackLayout >
+                <Frame CornerRadius="100" 
+                       HeightRequest="800"
+                       WidthRequest="1000"
+                       HorizontalOptions="Start"
+                       Padding="-35"
+                      IsClippedToBounds="True">
+                                                           
+                    <Image Source="h1.jpeg" 
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                </Frame>
+            </StackLayout>
 
 
 
