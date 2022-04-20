@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cardView="clr-namespace:CardView;assembly=CardView"
+
+             xmlns:local="clr-namespace:App52.ModelView" xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:combobox="clr-namespace:Xamarin.Forms.ComboBox;assembly=Xamarin.Forms.ComboBox"
+             x:Class="App52.Views.HomePageview">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#E0F2EF">
+
+            <Label Text="Home Page"
+                   VerticalOptions="Start" 
+                   Margin="18,40"
+                   HorizontalOptions="Center" 
+                   FontSize="Medium"
+                   FontAttributes="Bold"
+                   TextColor="Gray" />
+            
+
+
+
+
+
+                <StackLayout  Margin="20,50" >
+
+                <Label Text="Plan" FontAttributes="Bold" FontSize="Large" Margin="20,2,0,10"  VerticalOptions="Fill" HorizontalOptions="Start"   TextColor="Black"       ></Label>
+
+                <Button HeightRequest="20" HorizontalOptions="End"   BackgroundColor="Transparent" ImageSource="calendaricon.png" Margin="0,-40,0,5 " Clicked="Calender_Clicked" ></Button>
+
+            </StackLayout>
+
+
+
+
+            <ListView   x:Name="listBox1"    Grid.Row="1"  Margin="0,-50,0,0"  HasUnevenRows="True" SeparatorVisibility="None" 
+        >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell >
+
+                            <StackLayout Padding="8,8,8,8" Orientation="Vertical">
+
+                                <Frame CornerRadius="25" BackgroundColor="White"  HeightRequest="200"  Margin="30,0,30,0">
+                                    <cardView:CardView
+
+                                BackgroundColor="White"
+                                
+                                CardViewHasShadow="True"
+                                HeightRequest="100" >
+
+
+
+
+
+
+                                        <cardView:CardView.CardViewContent>
+                                            <StackLayout
+                                        Padding="10"
+                                            
+                                        HorizontalOptions="Center"
+                                        Spacing="10"
+                                        VerticalOptions="Center">
+
+
+
+
+                                                <Grid>
+
+
+
+
+
+
+                                                    <Label
+                                                Grid.Row="0"
+                                                Grid.Column="0"
+                                                Margin="20,0,0,0"
+                                                FontSize="Medium"
+                                                FontAttributes="Bold"     
+                                                TextColor="Black"
+                                                        
+                                                Text="{Binding Date}" />
+
+
+
+                                                </Grid>
+                                                <BoxView
+                                            HeightRequest="1"
+                                            WidthRequest="275"
+                                            Color="Black" />
+                                                <Grid>
+                                                    <StackLayout Orientation="Vertical">
+                                                        <StackLayout Orientation="Horizontal">
+                                                            <StackLayout Orientation="Horizontal" Margin="20,0,0,0">
+
+                                                                <Frame CornerRadius="100" 
+                                                           HeightRequest="25"
+                                                           WidthRequest="25"
+                                                           HorizontalOptions="Start"
+                                                           Padding="0"
+                                                           IsClippedToBounds="True"
+                                                           >
+
+                                                                    <Button ImageSource="pend.png" 
+                                                                Clicked="Button_Clicked"
+                                                               HorizontalOptions="Center"
+                                                               VerticalOptions="Center" />
+                                                                </Frame>
+
+
+                                                                <Label
+                                                Grid.Row="0"
+                                                Grid.Column="0"
+                                                Margin="15,0,0,0"
+                                                FontSize="Small"
+                                                                    TextColor="Black"
+                                                                    FontAttributes="Bold"
+                                                Text="{Binding StartTime1}" />
+                                                            </StackLayout>
+
+
+
+                                                            <Label
+                                                Grid.Row="0"
+                                                Grid.Column="1"
+                                                Margin="0,0,15,0"
+                                                FontSize="Small"
+                                                    TextColor="Black"
+                                                                    FontAttributes="Bold"            
+                                                HorizontalTextAlignment="End"
+                                                Text="{Binding  EndTime1 }" />
+                                                 </StackLayout>
+                                                            <Label
+                                                Grid.Row="0"
+                                                Grid.Column="1"
+                                                Margin="70,0,0,0"
+                                                FontSize="Small"
+                                                         TextColor="#2B2424"
+                                                                    FontAttributes="Bold"       
+                                                HorizontalTextAlignment="Start"
+                                                Text="{Binding  title1}" />
+
+
+
+                                                        
+
+
+                                                        <StackLayout Orientation="Horizontal">
+                                                            <StackLayout Orientation="Horizontal" Margin="20,0,0,0">
+
+                                                                <Frame CornerRadius="100" 
+                                                           HeightRequest="25"
+                                                           WidthRequest="25"
+                                                           HorizontalOptions="Start"
+                                                           Padding="0"
+                                                           IsClippedToBounds="True"
+                                                           >
+
+                                                                    <Button ImageSource="pend.png" 
+                                                                Clicked="Button_Clicked"
+                                                               HorizontalOptions="Center"
+                                                               VerticalOptions="Center" />
+                                                                </Frame>
+
+
+                                                                <Label
+                                                Grid.Row="0"
+                                                Grid.Column="0"
+                                                Margin="15,0,0,0"
+                                                FontSize="Small"
+                                                FontAttributes="Bold"
+                                                                    TextColor="#2B2424"
+                                                Text="{Binding StartTime2}" />
+                                                            </StackLayout>
+
+
+
+                                                            <Label
+                                                Grid.Row="0"
+                                                Grid.Column="1"
+                                                Margin="0,0,15,0"
+                                                FontSize="Small"
+                                                FontAttributes="Bold"
+                                                HorizontalTextAlignment="End"
+                                                                TextColor="Black"
+                                                Text="{Binding  EndTime2 }" />
+</StackLayout>
+                                                            <Label
+                                                Grid.Row="0"
+                                                Grid.Column="1"
+                                                Margin="70,0,15,0"
+                                                FontSize="Small"
+                                                FontAttributes="Bold"
+                                                HorizontalTextAlignment="Start"
+                                                    TextColor="#2B2424"
+                                                Text="{Binding  title2}" />
+
+
+
+                                                        
+
+                                                        <StackLayout Orientation="Horizontal">
+                                                            <StackLayout Orientation="Horizontal" Margin="20,0,0,0">
+
+                                                                <Frame CornerRadius="100" 
+                                                           HeightRequest="25"
+                                                           WidthRequest="25"
+                                                           HorizontalOptions="Start"
+                                                           Padding="0"
+                                                           IsClippedToBounds="True"
+                                                           >
+
+                                                                    <Button ImageSource="pend.png" 
+                                                                Clicked="Button_Clicked"
+                                                               HorizontalOptions="Center"
+                                                               VerticalOptions="Center" />
+                                                                </Frame>
+
+
+                                                                <Label
+                                                Grid.Row="0"
+                                                Grid.Column="0"
+                                                Margin="15,0,0,0"
+                                                FontSize="Small"
+                                                FontAttributes="Bold"
+                                                              TextColor="Black"
+                                                Text="{Binding StartTime3}" />
+                                                            </StackLayout>
+
+
+
+                                                            <Label
+                                                Grid.Row="0"
+                                                Grid.Column="1"
+                                                Margin="0,0,15,0"
+                                                FontSize="Small"
+                                                FontAttributes="Bold"
+                                                HorizontalTextAlignment="End"
+                                                         TextColor="Black"
+                                                Text="{Binding  EndTime3}" />
+</StackLayout>
+                                                            <Label
+                                                Grid.Row="0"
+                                                Grid.Column="1"
+                                                Margin="70,0,15,0"
+                                                FontSize="Small"
+                                                FontAttributes="Bold"
+                                                HorizontalTextAlignment="Start"
+                                                     TextColor="#2B2424"
+                                                Text="{Binding  title3}" />
+
+
+
+                                                        
+
+
+
+
+
+
+                                                    </StackLayout>
+                                                </Grid>
+                                            </StackLayout>
+                                        </cardView:CardView.CardViewContent>
+                                    </cardView:CardView>
+                                </Frame>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+
+
+
+
+            <Frame Margin="0"  VerticalOptions="End" BackgroundColor="WhiteSmoke" HorizontalOptions="Fill">
+                <StackLayout  HorizontalOptions="Center" Orientation="Horizontal"  >
+                    <StackLayout Orientation="Vertical">
+                        <Button WidthRequest="40"  Padding="0" Margin="20,0"
+                                HeightRequest="40"
+                                Clicked="ButtonHome_Clicked"
+                                HorizontalOptions="Start" BackgroundColor="WhiteSmoke"
+                                ImageSource="home.png"></Button>
+
+                        <Label FontAttributes="Bold" FontSize="Small"
+                               HorizontalOptions="Start"
+                               Margin="20,0"
+                               Text="Home"
+                               ></Label>
+                    </StackLayout>
+
+                    <StackLayout Padding="5,0" Orientation="Vertical">
+                        <Button WidthRequest="40" CornerRadius="30" Padding="0" Margin="20,0"
+                                HeightRequest="40"
+                                HorizontalOptions="Start" BackgroundColor="WhiteSmoke"
+                                ImageSource="notify.png"></Button>
+                        <Label TextColor="Gray" FontAttributes="Bold"
+                               HorizontalOptions="Start"
+                               Margin="20,0" FontSize="Small"
+                               Text="Notifi"></Label>
+                    </StackLayout>
+
+                    <StackLayout Padding="5,0" Orientation="Vertical">
+                        <Button WidthRequest="40" CornerRadius="30" Padding="0" Margin="20,0"
+                                HeightRequest="40"
+                                HorizontalOptions="Start" BackgroundColor="WhiteSmoke"
+                                ImageSource="explore.png"></Button>
+                        <Label FontSize="11" FontAttributes="Bold"
+                               HorizontalOptions="Start"
+                               Margin="20,0" TextColor="Gray"
+                               Text="Explore"></Label>
+                    </StackLayout>
+                    <StackLayout Padding="5,0" Orientation="Vertical">
+                        <Button WidthRequest="40" CornerRadius="30" Padding="0" Margin="20,0"
+                                HeightRequest="40"
+                                HorizontalOptions="Start" BackgroundColor="WhiteSmoke"
+                                ImageSource="profile.png"></Button>
+                        <Label FontSize="13"
+                               FontAttributes="Bold"
+                               HorizontalOptions="Start"
+                               Margin="20,0" TextColor="Gray"
+                               Text="Profile"></Label>
+                    </StackLayout>
+
+
+                </StackLayout>
+
+
+            </Frame>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+       
