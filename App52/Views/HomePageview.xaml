@@ -147,8 +147,8 @@
                                                 Grid.Column="1"
                                                 Margin="70,0,0,0"
                                                 FontSize="Small"
-                                                         TextColor="#2B2424"
-                                                                    FontAttributes="Bold"       
+                                                TextColor="Gray"                                                                   
+                                                FontAttributes="Bold"       
                                                 HorizontalTextAlignment="Start"
                                                 Text="{Binding  title1}" />
 
@@ -204,7 +204,8 @@
                                                 FontSize="Small"
                                                 FontAttributes="Bold"
                                                 HorizontalTextAlignment="Start"
-                                                    TextColor="#2B2424"
+                                                    TextColor="Gray" 
+                                                                   
                                                 Text="{Binding  title2}" />
 
 
@@ -258,7 +259,8 @@
                                                 FontSize="Small"
                                                 FontAttributes="Bold"
                                                 HorizontalTextAlignment="Start"
-                                                     TextColor="#2B2424"
+                                                                   
+                                                TextColor="Gray"      
                                                 Text="{Binding  title3}" />
 
 
